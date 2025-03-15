@@ -21,7 +21,7 @@ export class ProductoService {
   // crear un producto
   async crearProducto(producto: CreateProductoDto): Promise<MessageDto> {
     try {
-      const { prod_nombre, prod_precio } = producto;
+      const { prod_nombre } = producto;
 
       // validar si el producto ya existe
       const productoEncontrado = await this._productoRepository.findOne({
